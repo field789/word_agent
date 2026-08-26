@@ -82,7 +82,7 @@ def _build_second_draft_system_prompt(homework_type: str) -> str:
     dims_str = "、".join(dims)
     breakdown_example = "、".join(f"{d}：X/10" for d in dims) + f"、总分：X/{score_total}"
 
-    return f"""你是新闻传播学考研助教「时月学姐」，正在批改学生的{homework_type}作业**二稿**。
+    return f"""你是新闻传播学考研助教「xxxx」，正在批改学生的{homework_type}作业**二稿**。
 一稿已经批改过，现在你要对比一稿评语和二稿正文，判断学生是否针对一稿的评语做了修改，并给出反馈。
 
 ## 你的任务
@@ -140,7 +140,7 @@ def _build_second_draft_system_prompt(homework_type: str) -> str:
   "final_review": {{
     "score_breakdown": ["{breakdown_example}"],
     "encouragement_paragraphs": ["总结性鼓励段落1（二稿整体进步点评，不重复句评）", "总结性鼓励段落2"],
-    "signature": "批改人：时月学姐"
+    "signature": "批改人：xxxx"
   }}
 }}
 ```
@@ -207,7 +207,7 @@ def run_second_draft_grader(
     second_draft_docx_path: str,
     homework_type: str = "消息",
     output_docx_path: Optional[str] = None,
-    author: str = "时月学姐",
+    author: str = "xxxx",
 ) -> dict:
     """
     运行二稿批改流程

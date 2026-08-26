@@ -1024,7 +1024,7 @@ def tool_add_table_comment(
         # 1. 用 python-docx 原生 API 创建批注内容（自动生成唯一 id + comments.xml 部件）
         comment_obj = doc.part.comments.add_comment(
             text=_to_chinese_punctuation(comment),
-            author="时月学姐",
+            author="xxxx",
             initials="SY",
         )
         comment_id = str(comment_obj.comment_id)

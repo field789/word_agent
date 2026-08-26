@@ -163,7 +163,7 @@ def auto_grade():
                 answer_pdf_path=str(answer_pdf),
                 homework_docx_path=str(hw_path),
                 homework_type=type_name,
-                author="时月学姐",
+                author="xxxx",
             )
             all_results.append(result)
 
@@ -213,7 +213,7 @@ def auto_grade_second_drafts():
                 first_draft_docx_path=str(first_draft),
                 second_draft_docx_path=str(second_path),
                 homework_type=type_name,
-                author="时月学姐",
+                author="xxxx",
             )
             all_results.append(result)
 

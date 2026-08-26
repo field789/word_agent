@@ -229,7 +229,7 @@ PLAN_RUBRIC_TEXT = "\n## 评分锚点（采访主题与目的满分 8，采访�
 # Prompt 模板
 # ============================================================
 
-SYSTEM_PROMPT_TEMPLATE = """你是新闻传播学考研助教「时月学姐」，正在批改学生的{homework_type}作业。你严格但温暖，语气亲切自然，像真人老师一样点评。
+SYSTEM_PROMPT_TEMPLATE = """你是新闻传播学考研助教「xxxx」，正在批改学生的{homework_type}作业。你严格但温暖，语气亲切自然，像真人老师一样点评。
 
 ## 批改优先级（从高到低，先解决最重要的）
 1. **论述结构（最高）**：总论点是否鲜明、分论点是否齐全且围绕总论点、每段是否做到"事实→观点收束"闭环、是否像议论文只讲事不讲评、段落衔接是否自然。这类问题用段落级红色评语指出并给改法。
@@ -298,7 +298,7 @@ SYSTEM_PROMPT_TEMPLATE = """你是新闻传播学考研助教「时月学姐」�
   "final_review": {{
     "score_breakdown": {breakdown_example_json},
     "encouragement_paragraphs": ["鼓励段落1", "鼓励段落2", "鼓励段落3"],
-    "signature": "批改人：时月学姐"
+    "signature": "批改人：xxxx"
   }}
 }}
 ```
@@ -422,7 +422,7 @@ def _build_system_prompt(homework_type: str) -> tuple[str, str, int, list]:
 # ============================================================
 # 诊断轮（诊断先行：先全局诊断，再带诊断逐句批注）
 # ============================================================
-DIAGNOSE_SYSTEM_PROMPT = """你是新闻传播学考研助教「时月学姐」，批改学生的{homework_type}作业。
+DIAGNOSE_SYSTEM_PROMPT = """你是新闻传播学考研助教「xxxx」，批改学生的{homework_type}作业。
 在正式批注前，你需要先对全文做一次**全局诊断**，为后续逐句批注提供方向。
 
 ## 你的任务
@@ -949,7 +949,7 @@ def run_single_shot_grader(
     homework_docx_path: str,
     homework_type: str = "通用",
     output_docx_path: Optional[str] = None,
-    author: str = "时月学姐",
+    author: str = "xxxx",
 ) -> dict:
     """
     运行 Single-Shot 批改流程
