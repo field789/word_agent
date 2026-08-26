@@ -13,8 +13,8 @@
 
 ## 技术栈
 
-Python、DeepSeek API、python-docx、pypdf、OpenAI SDK、Git
+Python、DeepSeek API、python-docx、pypdf、OpenAI SDK
 
 ## 成果
 
-将原本需人工逐份批改的作业流程自动化，单份作业一次运行即可完成全文批注与评分，显著提升批改效率与一致性。
+将原本需人工逐份批改的作业流程自动化，单份作业一次运行即可完成全文批注与评分，显著提升批改效率与一致性。经老师检验后，提升90%+工作效率。
