@@ -1,0 +1,15 @@
+# 临时工作目录（批改中间产物，不入库）
+temp/
+
+# 密钥文件（不入库，避免泄露）
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pdf
+*.docx
+# 测试脚本
+temp/_test_*.py
+git_head_grader.py
